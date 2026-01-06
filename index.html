@@ -1,75 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QR Code Generator 👨🏻‍💻</title>
-  <link rel="stylesheet" href="./main.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-</head>
-<body>
-  <div class="qrcode-container">
-    <h1>QR Code Generator</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator 👨🏻‍💻</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="qrcode-container">
+      <h1>QR Code Generator</h1>
 
-    <form id="qrForm">
-      <input
-        type="text"
-        class="qrcode-input"
-        placeholder="Enter your text or URL"
-        required
-      />
-      <button type="submit" id="qrcode-btn">
-        <i class="fas fa-magic"></i> Generate QR Code
+      <form id="qrForm">
+        <input
+          type="text"
+          class="qrcode-input"
+          placeholder="Enter your text or URL"
+          required
+        />
+        <button type="submit" id="qrcode-btn">
+          <i class="fas fa-magic"></i> Generate QR Code
+        </button>
+      </form>
+
+      <div class="success-message" id="successMessage" style="display: none">
+        ✅ QR Code generated successfully!
+      </div>
+
+      <div class="qrcode-img-container" id="imageContainer">
+        <img src="" alt="QR Code not found!" class="qrcode-img" />
+      </div>
+
+      <button class="download-btn" id="downloadBtn">
+        <i class="fas fa-download"></i> Download QR Code
       </button>
-    </form>
 
-    <div class="success-message" id="successMessage" style="display:none;">
-      ✅ QR Code generated successfully!
+      <p class="footer-note">
+        Enter any text or URL to generate a QR Code instantly
+      </p>
     </div>
 
-    <div class="qrcode-img-container" id="imageContainer">
-      <img src="" alt="QR Code not found!" class="qrcode-img" />
-    </div>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h3 class="footer-title">QR Code Generator</h3>
+            <p class="footer-description">
+              Generate QR codes instantly for free
+            </p>
+          </div>
 
-    <button class="download-btn" id="downloadBtn">
-      <i class="fas fa-download"></i> Download QR Code
-    </button>
+          <div class="footer-links">
+            <a
+              href="https://github.com/mohammad-2012"
+              target="_blank"
+              class="github-link"
+            >
+              <i class="fab fa-github"></i> mohammad-2012
+            </a>
 
-    <p class="footer-note">
-      Enter any text or URL to generate a QR Code instantly
-    </p>
-  </div>
-
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <h3 class="footer-title">QR Code Generator</h3>
-          <p class="footer-description">Generate QR codes instantly for free</p>
-        </div>
-
-        <div class="footer-links">
-          <a href="https://github.com/mohammad-2012" target="_blank" class="github-link">
-            <i class="fab fa-github"></i> mohammad-2012
-          </a>
-
-          <div class="footer-copy">
-            <p>&copy; <span id="currentYear"></span> All rights reserved.</p>
-            <p class="footer-made">Made with ❤️ by Mohammad</p>
+            <div class="footer-copy">
+              <p>&copy; <span id="currentYear"></span> All rights reserved.</p>
+              <p class="footer-made">Made with ❤️ by Mohammad</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script>
-    // نمایش سال جاری
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-  </script>
+    <script>
+      // نمایش سال جاری
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+    </script>
 
-  <script src="./main.js"></script>
-</body>
+    <script src="./main.js"></script>
+  </body>
 </html>
